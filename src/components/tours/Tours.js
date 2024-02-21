@@ -1,10 +1,17 @@
 import './Tours.css';
-function Tours(props) {
+import Tour from './tour/Tour.js'
+const data = require('../../data/db.json')
+
+function Tours() {
     return (
-        <div class='card'>
-            <h2>{props.name}</h2>
-            <img src={props.image} alt={props.name} id='img' />
-        </div>
+        <>
+         {data.map(tour => {
+                return (
+                    <Tour key= {tour.id} tour ={tour} />
+                )
+            })}
+        </>
+           
     )
 }
 export default Tours;
