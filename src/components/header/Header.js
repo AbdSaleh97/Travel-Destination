@@ -1,10 +1,9 @@
 import './Header.css';
+import Navbar from '../Navbar/Navbar.js'
+
 function Header(){
     return(
-        <section id='header'>
-            <a href='#' id= "title">Travel Destination</a>
-        </section>
+      <Navbar/>
     )
 }
-
 export default Header;
